@@ -1,0 +1,58 @@
+if (Boolean.valueOf(rootProject.ext.isAlone)) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    resourcePrefix "material_"
+    defaultConfig {
+        if (Boolean.valueOf(rootProject.ext.isAlone)) {
+            applicationId rootProject.ext.applicationId.material
+        }
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        // aRoute
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
+    }
+
+    sourceSets {
+        main {
+            if (Boolean.valueOf(rootProject.ext.isAlone)) {
+                manifest.srcFile 'src/main/manifest/AndroidManifest.xml'
+            } else {
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+            }
+        }
+    }
+
+    dataBinding {
+        enabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':base')
+    // arouter-compiler 的注解依赖需要所有使用 ARouter 的 model 都添加依赖
+    annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
+}
+
