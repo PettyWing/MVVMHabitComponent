@@ -23,6 +23,7 @@ public class MainViewModel extends BaseViewModel {
     public BindingCommand materialOnClickCommand = new BindingCommand(new BindingAction() {
         @Override
         public void call() {
+//            startActivity(MaterialActivity.class);
             ARouter.getInstance().build("/material/main").navigation();
         }
     });

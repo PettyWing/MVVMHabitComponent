@@ -1,8 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.xyc.moudle_material" >
     <application
-        android:label="@string/app_name"
-        android:theme="@style/AppTheme">
+        android:label="@string/app_name">
         <activity android:name=".ui.MaterialActivity" />
     </application>
 </manifest>

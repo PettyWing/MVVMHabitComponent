@@ -3,7 +3,7 @@
 
     <data>
         <variable
-            name="entity"
+            name="viewModel"
             type="com.xyc.moudle_material.ui.MaterialViewModel" />
     </data>
 

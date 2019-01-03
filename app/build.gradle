@@ -43,6 +43,6 @@ dependencies {
     annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
 
     if (!Boolean.valueOf(rootProject.ext.isAlone)) {
-        runtimeOnly project(':moudle-material')
+        implementation project(':moudle-material')
     }
 }
