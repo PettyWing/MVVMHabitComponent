@@ -1,1 +1,1 @@
-include ':app', ':componentbase', ':base', ':moudle-material'
+include ':app', ':componentbase', ':base', ':moudle-material', ':moudle-douyin'

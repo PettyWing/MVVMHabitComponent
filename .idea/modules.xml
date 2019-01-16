@@ -5,7 +5,9 @@
       <module fileurl="file://$PROJECT_DIR$/MVVMHabitComponent.iml" filepath="$PROJECT_DIR$/MVVMHabitComponent.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/base/base.iml" filepath="$PROJECT_DIR$/base/base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/componentbase/componentbase.iml" filepath="$PROJECT_DIR$/componentbase/componentbase.iml" />
       <module fileurl="file://$PROJECT_DIR$/componentbase/componetbase.iml" filepath="$PROJECT_DIR$/componentbase/componetbase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/moudle-douyin/moudle-douyin.iml" filepath="$PROJECT_DIR$/moudle-douyin/moudle-douyin.iml" />
       <module fileurl="file://$PROJECT_DIR$/moudle-material/moudle-material.iml" filepath="$PROJECT_DIR$/moudle-material/moudle-material.iml" />
     </modules>
   </component>
